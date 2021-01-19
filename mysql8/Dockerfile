@@ -1,5 +1,5 @@
-FROM adminer:latest
+FROM mysql:8.0.19
 
 LABEL maintainer="dingxl@lingjia.tech, http://lingjia.tech"
 
-EXPOSE 8080
+EXPOSE 3306

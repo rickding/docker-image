@@ -1,5 +1,5 @@
-FROM adminer:latest
+FROM nginx:latest
 
 LABEL maintainer="dingxl@lingjia.tech, http://lingjia.tech"
 
-EXPOSE 8080
+EXPOSE 80 443

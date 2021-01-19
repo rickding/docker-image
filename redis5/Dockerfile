@@ -1,5 +1,5 @@
-FROM adminer:latest
+FROM redis:5.0
 
 LABEL maintainer="dingxl@lingjia.tech, http://lingjia.tech"
 
-EXPOSE 8080
+EXPOSE 6379
