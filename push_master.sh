@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# git@gitee.com:xsheep-tech/docker-image.git
+# git@gitee.com:dingxl18/docker-image.git
 # git@github.com:rickding/docker-image.git
 
 git checkout master

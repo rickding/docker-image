@@ -1,0 +1,40 @@
+version: '2'
+services:
+  mysql:
+    image: registry.cn-shanghai.aliyuncs.com/hellodock/mysql:8.0
+    environment:
+      MYSQL_DATABASE: test
+      MYSQL_ROOT_PASSWORD: root
+    command:
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_general_ci
+      --explicit_defaults_for_timestamp=true
+      --lower_case_table_names=1
+      --max_allowed_packet=128M
+    restart: always
+    ports:
+      - 3306:3306
+
+  dba:
+    image: registry.cn-shanghai.aliyuncs.com/hellodock/adminer:latest
+    restart: always
+    ports:
+      - 3006:8080
+    depends_on:
+      - mysql
+
+  redis:
+    image: registry.cn-shanghai.aliyuncs.com/hellodock/redis:5.0 
+    command: redis-server --appendonly yes --requirepass 123456
+    restart: always
+    ports:
+      - 6379:6379
+
+  mq:
+    hostname: mq
+    image: registry.cn-shanghai.aliyuncs.com/hellodock/activemq:latest
+    restart: always
+    ports:
+      - 61616:61616
+      - 61613:61613
+      - 8161:8161
