@@ -1,6 +1,6 @@
 version: '2'
 services:
-  mysql:
+  db:
     image: registry.cn-shanghai.aliyuncs.com/hellodock/mysql:8.0
     environment:
       MYSQL_DATABASE: test
@@ -21,9 +21,9 @@ services:
     ports:
       - 3006:8080
     depends_on:
-      - mysql
+      - db
 
-  redis:
+  cache:
     image: registry.cn-shanghai.aliyuncs.com/hellodock/redis:5.0 
     command: redis-server --appendonly yes --requirepass 123456
     restart: always
