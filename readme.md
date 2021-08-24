@@ -19,7 +19,7 @@ docker build -t swr.cn-south-1.myhuaweicloud.com/byxx-rdc/mysql:5.7 ./mysql5.7
 docker push swr.cn-south-1.myhuaweicloud.com/byxx-rdc/mysql:5.7
 
 docker build -t swr.cn-south-1.myhuaweicloud.com/byxx-rdc/mysql:8.0.19 ./mysql8.0.19
-docker push swr.cn-south-1.myhuaweicloud.com/byxx-rdc/mysq:l8.0.19
+docker push swr.cn-south-1.myhuaweicloud.com/byxx-rdc/mysql:8.0.19
 
 docker build -t swr.cn-south-1.myhuaweicloud.com/byxx-rdc/nginx:latest ./nginx
 docker push swr.cn-south-1.myhuaweicloud.com/byxx-rdc/nginx:latest
