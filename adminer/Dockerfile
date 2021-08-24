@@ -1,5 +1,5 @@
 FROM adminer:latest
 
-LABEL maintainer="dingxl@lingjia.tech, http://lingjia.tech"
+LABEL maintainer="白云信科，研发中心"
 
 EXPOSE 8080

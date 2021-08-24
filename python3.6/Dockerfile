@@ -1,3 +1,3 @@
 FROM python:3.6
 
-LABEL maintainer="dingxl@lingjia.tech, http://lingjia.tech"
+LABEL maintainer="白云信科，研发中心"
