@@ -1,22 +1,24 @@
 version: '2'
 services:
   db:
-    image: registry.cn-shanghai.aliyuncs.com/hellodock/mysql:8.0
+    image: swr.cn-south-1.myhuaweicloud.com/byxx-rdc/mysql:5.7.35
     environment:
-      MYSQL_DATABASE: test
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: cargo
+      MYSQL_ROOT_PASSWORD: q1w2e3r4
     command:
       --character-set-server=utf8mb4
       --collation-server=utf8mb4_general_ci
       --explicit_defaults_for_timestamp=true
       --lower_case_table_names=1
       --max_allowed_packet=128M
+    # volumes:
+    #   - ./data/mysql:/var/lib/mysql
     restart: always
     ports:
       - 3306:3306
 
   dba:
-    image: registry.cn-shanghai.aliyuncs.com/hellodock/adminer:latest
+    image: swr.cn-south-1.myhuaweicloud.com/byxx-rdc/adminer:latest
     restart: always
     ports:
       - 3006:8080
@@ -24,15 +26,19 @@ services:
       - db
 
   cache:
-    image: registry.cn-shanghai.aliyuncs.com/hellodock/redis:5.0 
-    command: redis-server --appendonly yes --requirepass 123456
+    image: swr.cn-south-1.myhuaweicloud.com/byxx-rdc/redis:5.0 
+    command: redis-server --appendonly yes --requirepass 1q2w3e4r
+    # volumes:
+    #   - ./data/redis:/data
     restart: always
     ports:
       - 6379:6379
 
   mq:
     hostname: mq
-    image: registry.cn-shanghai.aliyuncs.com/hellodock/activemq:latest
+    image: swr.cn-south-1.myhuaweicloud.com/byxx-rdc/activemq:latest
+    # volumes:
+    #   - ./data/activemq:/data/activemq
     restart: always
     ports:
       - 61616:61616
