@@ -11,8 +11,8 @@ services:
       --explicit_defaults_for_timestamp=true
       --lower_case_table_names=1
       --max_allowed_packet=128M
-    # volumes:
-    #   - ./data/mysql:/var/lib/mysql
+    volumes:
+      - ./data/mysql:/var/lib/mysql
     restart: always
     ports:
       - 3306:3306
@@ -25,20 +25,20 @@ services:
     depends_on:
       - db
 
-  cache:
-    image: swr.cn-south-1.myhuaweicloud.com/byxx-rdc/redis:5.0 
-    command: redis-server --appendonly yes --requirepass 1q2w3e4r
-    # volumes:
-    #   - ./data/redis:/data
-    restart: always
-    ports:
-      - 6379:6379
+  # cache:
+  #   image: swr.cn-south-1.myhuaweicloud.com/byxx-rdc/redis:5.0 
+  #   command: redis-server --appendonly yes --requirepass 1q2w3e4r
+  #   # volumes:
+  #   #   - ./data/redis:/data
+  #   restart: always
+  #   ports:
+  #     - 6379:6379
 
   mq:
     hostname: mq
     image: swr.cn-south-1.myhuaweicloud.com/byxx-rdc/activemq:latest
-    # volumes:
-    #   - ./data/activemq:/data/activemq
+    volumes:
+      - ./data/activemq:/data/activemq
     restart: always
     ports:
       - 61616:61616
