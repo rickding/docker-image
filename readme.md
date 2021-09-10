@@ -41,3 +41,6 @@ docker push swr.cn-south-1.myhuaweicloud.com/byxx-rdc/tomcat:latest
 
 docker build -t swr.cn-south-1.myhuaweicloud.com/byxx-rdc/python:3.6 ./python3.6
 docker push swr.cn-south-1.myhuaweicloud.com/byxx-rdc/python:3.6
+
+docker build -t swr.cn-south-1.myhuaweicloud.com/byxx-rdc/anaconda3:latest ./anaconda3
+docker push swr.cn-south-1.myhuaweicloud.com/byxx-rdc/anaconda3:latest
