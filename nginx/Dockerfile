@@ -6,5 +6,6 @@ WORKDIR /etc/nginx
 
 # 关闭日志
 COPY ./nginx.conf ./
+COPY ./conf.d/*.conf ./conf.d/
 
 EXPOSE 80 443
