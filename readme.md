@@ -15,6 +15,9 @@ docker push swr.cn-south-1.myhuaweicloud.com/byxx-rdc/activemq:latest
 docker build -t swr.cn-south-1.myhuaweicloud.com/byxx-rdc/adminer:latest ./adminer
 docker push swr.cn-south-1.myhuaweicloud.com/byxx-rdc/adminer:latest
 
+docker build -t swr.cn-south-1.myhuaweicloud.com/byxx-rdc/centos:7 ./centos7
+docker push swr.cn-south-1.myhuaweicloud.com/byxx-rdc/centos:7
+
 docker build -t swr.cn-south-1.myhuaweicloud.com/byxx-rdc/mysql:5.7 ./mysql5.7
 docker push swr.cn-south-1.myhuaweicloud.com/byxx-rdc/mysql:5.7
 
@@ -41,6 +44,9 @@ docker push swr.cn-south-1.myhuaweicloud.com/byxx-rdc/tomcat:latest
 
 docker build -t swr.cn-south-1.myhuaweicloud.com/byxx-rdc/python:3.6 ./python3.6
 docker push swr.cn-south-1.myhuaweicloud.com/byxx-rdc/python:3.6
+
+docker build -t swr.cn-south-1.myhuaweicloud.com/byxx-rdc/python:3.6.3 ./python3.6.3
+docker push swr.cn-south-1.myhuaweicloud.com/byxx-rdc/python:3.6.3
 
 docker build -t swr.cn-south-1.myhuaweicloud.com/byxx-rdc/anaconda3:latest ./anaconda3
 docker push swr.cn-south-1.myhuaweicloud.com/byxx-rdc/anaconda3:latest
