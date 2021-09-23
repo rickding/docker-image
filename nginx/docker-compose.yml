@@ -1,7 +1,10 @@
 version: '2'
 services:
   nginx:
-    image: nginx:latest
+    build:
+      context: .
     restart: always
     ports:
-      - 80:80
+      - "80:80"
+      - "8883:8883"
+      - "8888:8888"
