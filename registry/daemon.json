@@ -1,0 +1,8 @@
+{
+    "registry-mirrors":[
+        "https://pee6w651.mirror.aliyuncs.com"
+    ],
+    "insecure-registries":[
+        "192.168.179.128:5000"
+    ]
+}
