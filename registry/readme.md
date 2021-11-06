@@ -15,6 +15,9 @@ vi /etc/docker/daemon.json
     ]
 }
 ```
+```
+{"registry-mirrors":["https://pee6w651.mirror.aliyuncs.com"],"insecure-registries":["10.10.27.102:5000"]}
+```
 
 - 重启Docker客户端
 
