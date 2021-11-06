@@ -50,3 +50,12 @@ services:
     restart: always
     ports:
       - 80:80
+
+  # registry:
+  #   image: registry
+  #   volumes:
+  #     - ./data/docker/registry:/var/lib/registry
+  #   privileged: true
+  #   restart: always
+  #   ports:
+  #     - 5000:5000
