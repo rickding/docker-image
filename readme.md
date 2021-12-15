@@ -56,3 +56,6 @@ docker push swr.cn-south-1.myhuaweicloud.com/byxx-rdc/anaconda3:5.0.1
 
 docker build -t swr.cn-south-1.myhuaweicloud.com/byxx-rdc/registry ./registry
 docker push swr.cn-south-1.myhuaweicloud.com/byxx-rdc/registry
+
+docker build -t swr.cn-south-1.myhuaweicloud.com/byxx-rdc/openjdk:8u102-jdk ./openjdk:8u102-jdk
+docker push swr.cn-south-1.myhuaweicloud.com/byxx-rdc/openjdk:8u102-jdk
