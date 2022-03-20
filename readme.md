@@ -24,6 +24,12 @@ docker push swr.cn-south-1.myhuaweicloud.com/byxx-rdc/mysql:5.7
 docker build -t swr.cn-south-1.myhuaweicloud.com/byxx-rdc/mysql:5.7.35 ./mysql5.7.35
 docker push swr.cn-south-1.myhuaweicloud.com/byxx-rdc/mysql:5.7.35
 
+docker build -t swr.cn-south-1.myhuaweicloud.com/byxx-rdc/mysql:5.7.35-master1 ./mysql5.7.35-master-master/master1
+docker push swr.cn-south-1.myhuaweicloud.com/byxx-rdc/mysql:5.7.35-master1
+
+docker build -t swr.cn-south-1.myhuaweicloud.com/byxx-rdc/mysql:5.7.35-master2 ./mysql5.7.35-master-master/master2
+docker push swr.cn-south-1.myhuaweicloud.com/byxx-rdc/mysql:5.7.35-master2
+
 docker build -t swr.cn-south-1.myhuaweicloud.com/byxx-rdc/mysql:5.7.35-master ./mysql5.7.35-master-slave/master
 docker push swr.cn-south-1.myhuaweicloud.com/byxx-rdc/mysql:5.7.35-master
 
