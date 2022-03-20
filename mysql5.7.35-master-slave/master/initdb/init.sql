@@ -7,6 +7,7 @@ create database if not exists test_master;
 create user 'slave'@'%' identified by '123456';
 grant replication slave, replication client on *.* to 'slave'@'%';
 
+flush privileges;
 show grants for 'slave'@'%';
 
 -- 查看状态，记录同步点File和Position

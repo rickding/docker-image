@@ -9,7 +9,7 @@ services:
             - 3306:3306
         environment:
             MYSQL_DATABASE: test
-            MYSQL_ROOT_PASSWORD: root
+            MYSQL_ROOT_PASSWORD: q1w2e3r4
 
     dbs:
         build:
@@ -20,7 +20,7 @@ services:
             - 3406:3306
         environment:
             MYSQL_DATABASE: test
-            MYSQL_ROOT_PASSWORD: root
+            MYSQL_ROOT_PASSWORD: q1w2e3r4
         depends_on:
             - dbm
 
